@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/AllEqText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/equationText"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        />
+
+    <TextView
+        android:id="@+id/AllEqScoreField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zeoForScors"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/AllEqText"
+        app:layout_constraintStart_toStartOf="@id/AllEqText"
+        app:layout_constraintEnd_toEndOf="@id/AllEqText"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/AllCorrectText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/correctText"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/AllEqScoreField"
+        app:layout_constraintStart_toStartOf="@id/AllEqText"
+        app:layout_constraintEnd_toStartOf="@id/AllWrongText"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/AllWrongText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wrongText"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/AllEqScoreField"
+        app:layout_constraintEnd_toEndOf="@id/AllEqText"
+        app:layout_constraintStart_toEndOf="@id/AllCorrectText"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/AllCorrectScoreField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zeoForScors"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/AllCorrectText"
+        app:layout_constraintStart_toStartOf="@id/AllCorrectText"
+        app:layout_constraintEnd_toEndOf="@id/AllCorrectText"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/AllWrongScoreField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zeoForScors"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/AllWrongText"
+        app:layout_constraintEnd_toEndOf="@id/AllWrongText"
+        app:layout_constraintStart_toStartOf="@id/AllWrongText"
+        android:layout_marginTop="10dp"
+        />
+
+<!--    TODO: add time count here-->
+
+    <TextView
+        android:id="@+id/PercentScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zeroPercents"
+        android:textSize="50sp"
+        app:layout_constraintStart_toEndOf="@id/AllEqScoreField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="200dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/EquasionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/PercentScore"
+        app:layout_constraintStart_toEndOf="@id/AllWrongText"
+        android:layout_marginStart="115dp"
+        >
+
+        <TextView
+            android:id="@+id/Operand1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tmpOperand1"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/Operation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tmpOperation"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/Operand2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tmpOperand1"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/equals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/equalitiCharacter"
+            android:textSize="40sp" />
+
+        <EditText
+            android:id="@+id/AnswerField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/typiHint"
+            android:textSize="40sp"
+            android:autofillHints="answer Here"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/CorrectButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/CheckText"
+        android:textAllCaps="true"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/EquasionLayout"
+        app:layout_constraintEnd_toStartOf="@id/WrongButton"
+        app:layout_constraintBottom_toTopOf="@id/StartButton"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/WrongButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/CheckText"
+        android:textSize="25sp"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toBottomOf="@id/EquasionLayout"
+        app:layout_constraintStart_toEndOf="@id/CorrectButton"
+        app:layout_constraintBottom_toTopOf="@id/StartButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/StartButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/StartText"
+        android:textAllCaps="true"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/CorrectButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
