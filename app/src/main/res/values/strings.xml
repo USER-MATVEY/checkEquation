@@ -9,6 +9,8 @@
     <string name="tmpOperation">+</string>
     <string name="equalitiCharacter">=</string>
     <string name="typiHint">00</string>
-    <string name="CheckText">Проверка</string>
+    <string name="CheckText">Далее</string>
     <string name="StartText">Начать</string>
+    <string name="CorrectAnswer">Верно</string>
+    <string name="WrongAswer">Неверно</string>
 </resources>

@@ -132,40 +132,41 @@
             android:text="@string/equalitiCharacter"
             android:textSize="40sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/AnswerField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/typiHint"
+            android:text="@string/tmpOperand1"
             android:textSize="40sp"
-            android:autofillHints="answer Here"
-            android:inputType="number" />
+            />
     </LinearLayout>
 
     <Button
         android:id="@+id/CorrectButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/CheckText"
+        android:text="@string/CorrectAnswer"
         android:textAllCaps="true"
         android:textSize="25sp"
         app:layout_constraintTop_toBottomOf="@id/EquasionLayout"
         app:layout_constraintEnd_toStartOf="@id/WrongButton"
-        app:layout_constraintBottom_toTopOf="@id/StartButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:enabled="false"
         />
 
     <Button
         android:id="@+id/WrongButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/CheckText"
+        android:text="@string/WrongAswer"
         android:textSize="25sp"
         android:textAllCaps="true"
         app:layout_constraintTop_toBottomOf="@id/EquasionLayout"
         app:layout_constraintStart_toEndOf="@id/CorrectButton"
-        app:layout_constraintBottom_toTopOf="@id/StartButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:enabled="false"
         />
 
     <Button
@@ -178,5 +179,18 @@
         app:layout_constraintTop_toBottomOf="@id/CorrectButton"
         app:layout_constraintBottom_toBottomOf="parent"
         />
+
+    <Button
+        android:id="@+id/NextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/CheckText"
+        android:textAllCaps="true"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/CorrectButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
